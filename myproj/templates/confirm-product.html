@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<div>
+	<form method="POST" action=""> {% csrf_token %}
+		Would you like to confirm below product
+		<b>{{ product.product_name }}</b>
+		<input type="submit" name="Submit" value="Submit">
+	</form>
+</div>
+{% endblock %}

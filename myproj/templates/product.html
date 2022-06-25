@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<div>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>barcode</th>
+			<th>product-name</th>
+			<th>created-by</th>
+			<th>pending</th>
+			<th>view</th>
+			<th>confirm</th>
+		</tr>
+		{% for elem in product %}
+		<tr>
+			<td>{{elem.id}}</td>
+			<td>{{elem.barcode}}</td>
+			<td>{{elem.product_name}}</td>
+			<td>{{elem.created_by}}</td>
+			<td>{{elem.pending}}</td>
+			<td><a href="{% url 'update-product' elem.id %}">view</a></td>
+			<td><a href="{% url 'confirm-product' elem.id %}">confirm</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endblock %}

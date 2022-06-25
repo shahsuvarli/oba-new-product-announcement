@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div style="margin-left:100px; margin-top: 100px;">
+
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>resp-person</th>
+			<th>sends-to</th>
+		</tr>
+		{% for elem in table %}
+		<tr>
+			<td>{{elem.id}}</td>
+			<td>{{elem.responsible_person}}</td>
+			<td>{{elem.sends_to_id.responsible_person}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	
+ </div>
+{% endblock %}

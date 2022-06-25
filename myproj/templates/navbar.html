@@ -1,0 +1,31 @@
+{% load static %}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background: #007500 !important;">
+  <a href="{% url 'home' %}"><img style="margin-left:30px;background-color: rgb(300, 300, 300); width: 60px" src="{% static 'images/obalogo.png' %}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link active" href="{% url 'process' %}" style="color: yellow;">Process flow</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'create-product' %}" style="color: yellow;">Sifariş yarat</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'product' %}" style="color: yellow; margin-left: 23px;">Çeşid cədvəli</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="" style="color: yellow;">Çeşid yarat</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <a style="color: yellow; margin-right: 50px;">Salam, {{ request.user }}</a>
+  <a href="" style="color: yellow; margin-right: 50px;">Çıxış</a>
+
+</nav>
